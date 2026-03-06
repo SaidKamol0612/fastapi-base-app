@@ -21,8 +21,8 @@ class GunicornLogger(Logger):
         super().setup(cfg)
 
         formatter = Formatter(
-            fmt=settings.logging.format,
-            datefmt=settings.logging.date_format,
+            fmt=settings.logging.fmt,
+            datefmt=settings.logging.date_fmt,
         )
 
         self._set_handler(  # type: ignore
