@@ -20,4 +20,4 @@ def parse_integrity_error(e: IntegrityError) -> str:
     for returning via API.
     """
     code = getattr(e.orig, "sqlstate", None)
-    return PG_ERROR_MAP.get(code, "Database integrity error") # type: ignore
+    return PG_ERROR_MAP.get(code, "Database integrity error")  # type: ignore
