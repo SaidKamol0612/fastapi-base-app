@@ -16,13 +16,16 @@ dependencies = [
     "pydantic-settings (>=2.10.1,<3.0.0)",
     "orjson (>=3.11.3,<4.0.0)",
     "alembic (>=1.17.0,<2.0.0)",
-    "black (>=25.9.0,<26.0.0)"
 ]
 
 
 [tool.poetry]
-package-mode = false
+packages = [{ include="*", from="src" }]
 
+
+[tool.poetry.group.dev.dependencies]
+black = "^26.1.0"
+ruff = "^0.15.5"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
